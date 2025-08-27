@@ -212,14 +212,18 @@
         {% assign filenameparts = file.path | split: "/" %}
         {% assign filename = filenameparts | last | replace: file.extname,"" %}
 
-        {% comment %} Enhanced parsing for astrophotography naming {% endcomment %}
         {% assign parts = filename | split: "-" %}
 
         {% if parts.size == 1 %}
-            {% assign clean_name = filename | replace: "0", "" | replace: "1", "" | replace: "2", "" | replace: "3", "" | replace: "4", "" | replace: "5", "" | replace: "6", "" | replace: "7", "" | replace: "8", "" | replace: "9", "" %}
-            {% assign sequence_match = filename | remove: clean_name %}
+            {% assign digits_removed = filename %}
+            {% for i in (0..9) %}
+                {% assign digit_str = i | append: "" %}
+                {% assign digits_removed = digits_removed | replace: digit_str, "" %}
+            {% endfor %}
+
+            {% assign sequence_match = filename | remove: digits_removed %}
             {% if sequence_match != "" %}
-                {% assign title = clean_name %}
+                {% assign title = digits_removed %}
                 {% assign number = sequence_match %}
             {% else %}
                 {% assign title = filename %}
