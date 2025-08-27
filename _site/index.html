@@ -28,7 +28,7 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"></noscript>
 
-    <link rel="stylesheet" href="/astrophotography/assets/css/style.css?v=fd5903aebbbc530af3139d75d85e38ae41625670">
+    <link rel="stylesheet" href="/astrophotography/assets/css/style.css?v=ae15fd7a70f80da512eb7cba482fcac00d91ca51">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔭</text></svg>">
@@ -93,7 +93,7 @@
         position: relative;
         aspect-ratio: 1;
         overflow: hidden;
-        background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+        background: #050712;
     }
 
     .art-gallery-image {
@@ -822,8 +822,12 @@
 
       /* Header styling */
       .page-header {
-        background: var(--header-bg);
-        border-bottom: 2px solid var(--border-color);
+  /* Space look: black with subtle stars */
+  background: #090b1a url('https://raw.githubusercontent.com/ajlkn/cardinal/master/images/bg01.png') repeat top center;
+  border-bottom: 2px solid var(--border-color);
+  box-shadow: 0 2px 24px 0 rgba(0,0,0,0.7);
+  position: relative;
+  min-height: 180px;
       }
 
       .project-name {

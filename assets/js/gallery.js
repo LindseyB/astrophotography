@@ -147,7 +147,7 @@ const lightboxCSS = `
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(5, 7, 20, 0.98);
   backdrop-filter: blur(10px);
   opacity: 0;
   animation: fadeIn 0.3s ease forwards;
@@ -169,10 +169,11 @@ const lightboxCSS = `
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: white;
+  background: #050712;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+  border: 1px solid #1a1a2e;
 }
 
 .art-lightbox-content {
@@ -183,6 +184,7 @@ const lightboxCSS = `
   max-height: 90vh;
   overflow: hidden;
   padding: 0 4rem;
+  background: #050712;
 }
 
 .art-lightbox-image {
@@ -190,13 +192,17 @@ const lightboxCSS = `
   max-height: 70vh;
   object-fit: contain;
   display: block;
+  background: #050712;
+  border-radius: 8px;
+  padding: 1rem;
 }
 
 .art-lightbox-info {
   padding: 1.5rem;
   text-align: center;
   width: 100%;
-  background: white;
+  background: #050712;
+  color: #e0e0e0;
 }
 
 .art-lightbox-title {
