@@ -30,10 +30,6 @@ body {
 }
 
 .page-header {
-  background: var(--secondary-gradient), url('https://i.imgur.com/5Ww5Nmw.gif') !important;
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: overlay;
   padding: 4rem 0;
   position: relative;
   overflow: hidden;
@@ -136,15 +132,15 @@ body {
     padding: 2rem 1rem;
     border-radius: 0;
   }
-  
+
   .page-header {
     padding: 3rem 0;
   }
-  
+
   .project-name {
     font-size: 2rem;
   }
-  
+
   .project-tagline {
     font-size: 1rem;
   }
@@ -154,7 +150,7 @@ body {
   .main-content {
     padding: 1.5rem 1rem;
   }
-  
+
   .page-header {
     padding: 2rem 0;
   }
