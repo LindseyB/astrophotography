@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Astrophotography | fART</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Astrophotography" />
+<meta name="author" content="LindseyB" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="A curated collection of astrophotographys by LindseyB" />
+<meta property="og:description" content="A curated collection of astrophotographys by LindseyB" />
+<link rel="canonical" href="http://localhost:4000/fART/" />
+<meta property="og:url" content="http://localhost:4000/fART/" />
+<meta property="og:site_name" content="fART" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Astrophotography" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"LindseyB"},"description":"A curated collection of astrophotographys by LindseyB","headline":"Astrophotography","name":"fART","url":"http://localhost:4000/fART/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"></noscript>
+    
+    <link rel="stylesheet" href="/fART/assets/css/style.css?v=1db0b3bf688e42cb1242656c4777c69a7fd90e6f">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
+    
+    <!-- Meta tags for better social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://localhost:4000/fART/scans/00001-tortoise.png">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Performance optimizations -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="msapplication-TileColor" content="#667eea">
+  </head>
+  
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Astrophotography</h1>
+      <h2 class="project-tagline">A curated collection of astrophotographys by LindseyB</h2>
+      
+        <a href="https://github.com/LindseyB/astrophotography" class="btn">View on GitHub</a>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <style>
+    .art-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+        padding: 2rem 0;
+        list-style: none;
+        margin: 0;
+    }
+
+    .art-gallery-item {
+        position: relative;
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateY(0);
+    }
+
+    .art-gallery-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .art-gallery-link {
+        display: block;
+        text-decoration: none !important;
+        color: inherit;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .art-gallery-image-container {
+        position: relative;
+        aspect-ratio: 1;
+        overflow: hidden;
+        background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+    }
+
+    .art-gallery-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        display: block;
+    }
+
+    .art-gallery-item:hover .art-gallery-image {
+        transform: scale(1.05);
+    }
+
+    .art-gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        padding: 2rem 1.5rem 1.5rem;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+        color: white;
+    }
+
+    .art-gallery-item:hover .art-gallery-overlay {
+        transform: translateY(0);
+    }
+
+    .art-gallery-title {
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-family: 'JetBrains Mono', monospace;
+    }
+
+    .art-gallery-number {
+        font-size: 0.8rem;
+        opacity: 0.8;
+        margin-top: 0.25rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 400;
+    }
+
+    .gallery-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .gallery-title {
+        font-size: 2.2rem;
+        font-weight: 600;
+        margin: 0 0 1rem;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-family: 'JetBrains Mono', monospace;
+        letter-spacing: -0.02em;
+    }
+
+    .gallery-subtitle {
+        font-size: 1rem;
+        color: #666;
+        margin: 0;
+        font-weight: 300;
+        font-family: 'JetBrains Mono', monospace;
+        letter-spacing: 0.01em;
+    }
+
+    .gallery-stats {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        padding: 0.75rem 1.5rem;
+        background: rgba(102, 126, 234, 0.1);
+        border-radius: 50px;
+        font-size: 0.8rem;
+        color: #667eea;
+        font-weight: 500;
+        font-family: 'JetBrains Mono', monospace;
+        letter-spacing: 0.025em;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .art-gallery {
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+        }
+
+        .gallery-title {
+            font-size: 1.8rem;
+        }
+
+        .art-gallery-overlay {
+            padding: 1.5rem 1rem 1rem;
+        }
+
+        .art-gallery-title {
+            font-size: 0.8rem;
+        }
+
+        .art-gallery-number {
+            font-size: 0.75rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .art-gallery {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-title {
+            font-size: 1.5rem;
+        }
+
+        .gallery-subtitle {
+            font-size: 0.9rem;
+        }
+
+        .gallery-stats {
+            font-size: 0.75rem;
+        }
+    }
+
+    /* Loading animation */
+    .art-gallery-image {
+        opacity: 0;
+        animation: fadeIn 0.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Focus states for accessibility */
+    .art-gallery-link:focus {
+        outline: 2px solid #667eea;
+        outline-offset: 2px;
+    }
+</style>
+
+<div class="gallery-header">
+    
+    
+    
+    
+
+    <div class="gallery-stats">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21,17H7V3A1,1 0 0,0 6,2H4A1,1 0 0,0 3,3V17A4,4 0 0,0 7,21H21A1,1 0 0,0 22,20V18A1,1 0 0,0 21,17M5,17V4H6V17A2,2 0 0,1 5,17M21,19H7A2,2 0 0,1 7,17H21V19Z"/>
+        </svg>
+        22 photos
+    </div>
+</div>
+
+<ul class="art-gallery">
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/Castor.jpeg" title="Castor" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/Castor.jpeg&w=500&h=500&output=jpg"
+                         alt="Castor"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">Untitled</h3>
+                    <div class="art-gallery-number">#Castor</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/Jupiter.jpeg" title="Jupiter" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/Jupiter.jpeg&w=500&h=500&output=jpg"
+                         alt="Jupiter"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">Untitled</h3>
+                    <div class="art-gallery-number">#Jupiter</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/M16-EagleNebula.jpeg" title="EagleNebula" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/M16-EagleNebula.jpeg&w=500&h=500&output=jpg"
+                         alt="EagleNebula"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">EagleNebula</h3>
+                    <div class="art-gallery-number">#M16</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/M17-OmegaNebula.jpeg" title="OmegaNebula" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/M17-OmegaNebula.jpeg&w=500&h=500&output=jpg"
+                         alt="OmegaNebula"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">OmegaNebula</h3>
+                    <div class="art-gallery-number">#M17</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/M20-TrifidNebula.jpeg" title="TrifidNebula" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/M20-TrifidNebula.jpeg&w=500&h=500&output=jpg"
+                         alt="TrifidNebula"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">TrifidNebula</h3>
+                    <div class="art-gallery-number">#M20</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/M27-DumbbellNebula.jpeg" title="DumbbellNebula" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/M27-DumbbellNebula.jpeg&w=500&h=500&output=jpg"
+                         alt="DumbbellNebula"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">DumbbellNebula</h3>
+                    <div class="art-gallery-number">#M27</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/M33-TriangulamGalaxy.jpeg" title="TriangulamGalaxy" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/M33-TriangulamGalaxy.jpeg&w=500&h=500&output=jpg"
+                         alt="TriangulamGalaxy"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">TriangulamGalaxy</h3>
+                    <div class="art-gallery-number">#M33</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/M42-GreatNebulaInOrion.jpeg" title="GreatNebulaInOrion" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/M42-GreatNebulaInOrion.jpeg&w=500&h=500&output=jpg"
+                         alt="GreatNebulaInOrion"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">GreatNebulaInOrion</h3>
+                    <div class="art-gallery-number">#M42</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/M43-DeMairansNebula.jpeg" title="DeMairansNebula" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/M43-DeMairansNebula.jpeg&w=500&h=500&output=jpg"
+                         alt="DeMairansNebula"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">DeMairansNebula</h3>
+                    <div class="art-gallery-number">#M43</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/M46.jpeg" title="M46" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/M46.jpeg&w=500&h=500&output=jpg"
+                         alt="M46"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">Untitled</h3>
+                    <div class="art-gallery-number">#M46</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/M57-RingNebula.jpeg" title="RingNebula" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/M57-RingNebula.jpeg&w=500&h=500&output=jpg"
+                         alt="RingNebula"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">RingNebula</h3>
+                    <div class="art-gallery-number">#M57</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/M76-LittleDumbellNebula.jpeg" title="LittleDumbellNebula" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/M76-LittleDumbellNebula.jpeg&w=500&h=500&output=jpg"
+                         alt="LittleDumbellNebula"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">LittleDumbellNebula</h3>
+                    <div class="art-gallery-number">#M76</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/M82-CigarGalaxy.jpeg" title="CigarGalaxy" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/M82-CigarGalaxy.jpeg&w=500&h=500&output=jpg"
+                         alt="CigarGalaxy"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">CigarGalaxy</h3>
+                    <div class="art-gallery-number">#M82</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/Mars.jpeg" title="Mars" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/Mars.jpeg&w=500&h=500&output=jpg"
+                         alt="Mars"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">Untitled</h3>
+                    <div class="art-gallery-number">#Mars</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/Mars02.jpeg" title="Mars02" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/Mars02.jpeg&w=500&h=500&output=jpg"
+                         alt="Mars02"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">Untitled</h3>
+                    <div class="art-gallery-number">#Mars02</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/Mars03.jpeg" title="Mars03" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/Mars03.jpeg&w=500&h=500&output=jpg"
+                         alt="Mars03"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">Untitled</h3>
+                    <div class="art-gallery-number">#Mars03</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/Moon.jpeg" title="Moon" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/Moon.jpeg&w=500&h=500&output=jpg"
+                         alt="Moon"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">Untitled</h3>
+                    <div class="art-gallery-number">#Moon</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/Moon02.jpeg" title="Moon02" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/Moon02.jpeg&w=500&h=500&output=jpg"
+                         alt="Moon02"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">Untitled</h3>
+                    <div class="art-gallery-number">#Moon02</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/RunningManNebula.jpeg" title="RunningManNebula" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/RunningManNebula.jpeg&w=500&h=500&output=jpg"
+                         alt="RunningManNebula"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">Untitled</h3>
+                    <div class="art-gallery-number">#RunningManNebula</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/Saturn.jpeg" title="Saturn" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/Saturn.jpeg&w=500&h=500&output=jpg"
+                         alt="Saturn"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">Untitled</h3>
+                    <div class="art-gallery-number">#Saturn</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/Sun.jpeg" title="Sun" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/Sun.jpeg&w=500&h=500&output=jpg"
+                         alt="Sun"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">Untitled</h3>
+                    <div class="art-gallery-number">#Sun</div>
+                </div>
+            </a>
+        </li>
+    
+        
+        
+        
+        
+        
+        
+
+        <li class="art-gallery-item">
+            <a href="/fART/unistellar/Uranus.jpeg" title="Uranus" target="_blank" class="art-gallery-link">
+                <div class="art-gallery-image-container">
+                    <img src="//images.weserv.nl/?url=localhost:4000/fART/unistellar/Uranus.jpeg&w=500&h=500&output=jpg"
+                         alt="Uranus"
+                         class="art-gallery-image"
+                         loading="lazy" />
+                </div>
+                <div class="art-gallery-overlay">
+                    <h3 class="art-gallery-title">Untitled</h3>
+                    <div class="art-gallery-number">#Uranus</div>
+                </div>
+            </a>
+        </li>
+    
+</ul>
+
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner">
+            <a href="https://github.com/LindseyB/astrophotography">astrophotography</a> 
+            is maintained by <a href="https://github.com/LindseyB">LindseyB</a>.
+          </span>
+        
+        <span class="site-footer-credits">
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a> 
+          using the <a href="https://github.com/pages-themes/cayman">Cayman theme</a>.
+        </span>
+      </footer>
+    </main>
+
+    <!-- Analytics and performance -->
+    <script>
+      // Lazy loading fallback for older browsers
+      if ('loading' in HTMLImageElement.prototype) {
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        images.forEach(img => {
+          img.src = img.dataset.src || img.src;
+        });
+      } else {
+        // Fallback for browsers that don't support native lazy loading
+        const script = document.createElement('script');
+        script.src = 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver';
+        document.body.appendChild(script);
+      }
+
+      // Simple analytics for image views
+      document.querySelectorAll('.art-gallery-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          // Track image clicks if analytics is set up
+          const artTitle = this.querySelector('.art-gallery-title')?.textContent || 'Unknown';
+          console.log(`Viewed artwork: ${artTitle}`);
+        });
+      });
+
+      // Add smooth hover effects
+      const galleryItems = document.querySelectorAll('.art-gallery-item');
+      galleryItems.forEach((item, index) => {
+        // Stagger the initial animation
+        item.style.animationDelay = `${index * 0.05}s`;
+        item.classList.add('fade-in');
+      });
+    </script>
+
+    <!-- Gallery lightbox functionality -->
+    <script src="/fART/assets/js/gallery.js"></script>
+
+    <style>
+      .fade-in {
+        opacity: 0;
+        animation: fadeInUp 0.6s ease forwards;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .site-footer {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border-color);
+        font-size: 0.875rem;
+        color: var(--text-light);
+        text-align: center;
+      }
+
+      .site-footer-owner {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      .site-footer a {
+        color: #667eea;
+        text-decoration: none;
+      }
+
+      .site-footer a:hover {
+        text-decoration: underline;
+      }
+
+      #skip-to-content {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        z-index: 999;
+        color: white;
+        background: #667eea;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: top 0.3s;
+      }
+
+      #skip-to-content:focus {
+        top: 6px;
+      }
+    </style>
+  </body>
+</html>
