@@ -8,7 +8,7 @@
 
 /* Root variables for consistent theming */
 :root {
-  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary-gradient: linear-gradient(135deg, #c874b2 0%, #764ba2 100%);
   --secondary-gradient: linear-gradient(120deg, #155799, #159957);
   --text-dark: #2d3748;
   --text-light: #718096;
@@ -33,17 +33,6 @@ body {
   padding: 4rem 0;
   position: relative;
   overflow: hidden;
-}
-
-.page-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
-  z-index: 1;
 }
 
 .page-header * {
@@ -163,7 +152,7 @@ html {
 
 /* Focus improvements for accessibility */
 *:focus {
-  outline: 2px solid #667eea;
+  outline: 2px solid #c874b2;
   outline-offset: 2px;
 }
 

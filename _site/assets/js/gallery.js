@@ -221,7 +221,7 @@ const lightboxCSS = `
 .art-lightbox-download {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: #667eea;
+  background: #c874b2;
   color: white;
   text-decoration: none;
   border-radius: 6px;
@@ -231,7 +231,7 @@ const lightboxCSS = `
 }
 
 .art-lightbox-download:hover {
-  background: #5a67d8;
+  background: #c874b2;
 }
 
 .art-lightbox-close {
