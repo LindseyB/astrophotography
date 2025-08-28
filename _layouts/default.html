@@ -18,7 +18,23 @@
 
     <!-- Meta tags for better social sharing -->
     <meta property="og:type" content="website">
-    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/scans/00001-tortoise.png">
+
+    {% assign gallery_images = "" | split: "," %}
+    {% for file in site.static_files %}
+        {% if file.path contains "unistellar" %}
+            {% if file.extname == '.png' or file.extname == '.PNG' or file.extname == '.jpg' or file.extname == '.jpeg' or file.extname == '.JPG' or file.extname == '.JPEG' %}
+                {% assign gallery_images = gallery_images | push: file %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% assign sorted_gallery = gallery_images | sort: 'modified_time' | reverse %}
+    {% if sorted_gallery.size > 0 %}
+        {% assign latest_image = sorted_gallery | first %}
+        <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ latest_image.path }}">
+    {% else %}
+        <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/unistellar/M42-GreatNebulaInOrion.jpeg">
+    {% endif %}
+
     <meta name="twitter:card" content="summary_large_image">
 
     <!-- Performance optimizations -->
